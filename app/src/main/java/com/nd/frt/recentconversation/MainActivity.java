@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         UserAdapter userAdapter = new UserAdapter(userInfos);
         RecyclerView recyclerView = findViewById(R.id.recycle);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        recyclerView.setAdapter( userAdapter);
+        recyclerView.setAdapter(userAdapter);
     }
 
 }

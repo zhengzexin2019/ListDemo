@@ -1,7 +1,6 @@
 
 package com.nd.frt.recentconversation.adapter;
 
-
 import android.annotation.SuppressLint;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -17,23 +16,14 @@ import com.nd.frt.recentconversation.viewholder.UserViewHolder;
 import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
-
-
-    public static final String TAG = UserAdapter.class.getSimpleName();
     private List<UserInfo> mUserInfos;
-    private int REQUEST_EDIT_USER_IFNO;
 
     public UserAdapter(List<UserInfo> userInfos) {
-
         mUserInfos = userInfos;
-
     }
 
-
     @NonNull
-
     @Override
-
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
         View inflate = layoutInflater.inflate(R.layout.item_user, viewGroup, false);
@@ -41,9 +31,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
 
     }
 
-
     @Override
-
     public void onBindViewHolder(@NonNull UserViewHolder userViewHolder, @SuppressLint("RecyclerView") final int position) {
         final UserInfo userInfo = mUserInfos.get(position);
         Glide.with(userViewHolder.mIvAvatar)
@@ -55,8 +43,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
 
     @Override
     public int getItemCount() {
-
         return mUserInfos.size();
-
     }
 }
